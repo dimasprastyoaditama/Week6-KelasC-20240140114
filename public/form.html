@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulasi Cicilan — Hitung Cicilan Produk</title>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Katalog</a>
+    <a href="form.html" aria-current="page">Simulasi Cicilan</a>
+  </nav>
+
+  <header>
+    <div class="eyebrow">Rak No. 02 — Meja Kasir</div>
+    <h1>Simulasi Cicilan</h1>
+    <p>isi data produk, atur DP &amp; tenor, cicilan dihitung otomatis</p>
+  </header>
+
+  <main class="form-layout">
+    <form id="form" novalidate>
+      <label for="nama">Nama Produk</label>
+      <input type="text" id="nama" placeholder="contoh: Laptop Gaming" aria-describedby="nama-error">
+      <small class="error" id="nama-error" aria-live="polite"></small>
+
+      <label for="harga">Harga (Rp)</label>
+      <input type="number" id="harga" placeholder="contoh: 8000000" aria-describedby="harga-error harga-preview">
+      <small class="hint" id="harga-preview"></small>
+      <small class="error" id="harga-error" aria-live="polite"></small>
+
+      <label for="dp">Uang Muka (DP): <output id="dp-output" for="dp">20%</output></label>
+      <input type="range" id="dp" min="0" max="50" step="5" value="20">
+
+      <label for="tenor">Tenor</label>
+      <select id="tenor" aria-describedby="tenor-error">
+        <option value="">-- pilih tenor --</option>
+        <option value="3">3 bulan (bunga 0%)</option>
+        <option value="6">6 bulan (bunga 0,8% / bulan)</option>
+        <option value="12">12 bulan (bunga 1,0% / bulan)</option>
+        <option value="24">24 bulan (bunga 1,2% / bulan)</option>
+      </select>
+      <small class="error" id="tenor-error" aria-live="polite"></small>
+
+      <label class="check" for="setuju">
+        <input type="checkbox" id="setuju" aria-describedby="setuju-error">
+        Saya paham hasil ini hanya simulasi
+      </label>
+      <small class="error" id="setuju-error" aria-live="polite"></small>
+
+      <div class="actions">
+        <button type="submit" id="hitungBtn">Hitung Cicilan</button>
+        <button type="button" id="resetBtn" class="secondary">Reset</button>
+      </div>
+    </form>
+
+    <section id="result" class="result" aria-live="polite" hidden>
+      <div id="feedback" class="feedback"></div>
+      <dl id="resultList"></dl>
+    </section>
+  </main>
+
+  <footer>
+    simulasi cicilan &middot; HTML + CSS + JavaScript native
+  </footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>
