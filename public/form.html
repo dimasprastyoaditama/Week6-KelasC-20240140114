@@ -34,6 +34,28 @@
       <label for="dp">Uang Muka (DP): <output id="dp-output" for="dp">20%</output></label>
       <input type="range" id="dp" min="0" max="50" step="5" value="20">
 
-      
+      <label for="tenor">Tenor</label>
+      <select id="tenor" aria-describedby="tenor-error">
+        <option value="">-- pilih tenor --</option>
+        <option value="3">3 bulan (bunga 0%)</option>
+        <option value="6">6 bulan (bunga 0,8% / bulan)</option>
+        <option value="12">12 bulan (bunga 1,0% / bulan)</option>
+        <option value="24">24 bulan (bunga 1,2% / bulan)</option>
+      </select>
+      <small class="error" id="tenor-error" aria-live="polite"></small>
+
+      <label class="check" for="setuju">
+        <input type="checkbox" id="setuju" aria-describedby="setuju-error">
+        Saya paham hasil ini hanya simulasi
+      </label>
+      <small class="error" id="setuju-error" aria-live="polite"></small>
+
+      <div class="actions">
+        <button type="submit" id="hitungBtn">Hitung Cicilan</button>
+        <button type="button" id="resetBtn" class="secondary">Reset</button>
+      </div>
+    </form>
+
+    
 </body>
 </html>
