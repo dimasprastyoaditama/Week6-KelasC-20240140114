@@ -22,7 +22,15 @@
 
   <main class="form-layout">
     <form id="form" novalidate>
-      </form>
-  </main>
+      <label for="nama">Nama Produk</label>
+      <input type="text" id="nama" placeholder="contoh: Laptop Gaming" aria-describedby="nama-error">
+      <small class="error" id="nama-error" aria-live="polite"></small>
+
+      <label for="harga">Harga (Rp)</label>
+      <input type="number" id="harga" placeholder="contoh: 8000000" aria-describedby="harga-error harga-preview">
+      <small class="hint" id="harga-preview"></small>
+      <small class="error" id="harga-error" aria-live="polite"></small>
+
+      
 </body>
 </html>
