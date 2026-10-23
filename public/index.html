@@ -1,53 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katalog — Etalase Gadget & Gaya Hidup</title>
-<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" aria-current="page">Katalog</a>
-    <a href="form.html">Simulasi Cicilan</a>
-  </nav>
-
-  <header>
-    <div class="eyebrow">Rak No. 01 — Toko Digital</div>
-    <h1>Katalog Produk</h1>
-    <p>data produk ditarik langsung dari dummyjson.com/products</p>
-  </header>
-
-  <section class="controls">
-    <input type="text" id="searchInput" placeholder="cari nama produk..." aria-label="Cari produk">
-    <select id="categorySelect" aria-label="Filter kategori">
-      <option value="">Semua Kategori</option>
-    </select>
-    <select id="sortSelect" aria-label="Urutkan produk">
-      <option value="default">Urutan Bawaan</option>
-      <option value="price-asc">Harga: Termurah</option>
-      <option value="price-desc">Harga: Termahal</option>
-      <option value="rating-desc">Rating Tertinggi</option>
-    </select>
-  </section>
-
-  <main>
-    <p id="resultInfo" aria-live="polite"></p>
-
-    <div id="status" role="status" aria-live="polite">
-      <div class="spinner" id="spinner"></div>
-      <p id="statusText">Memuat produk...</p>
-      <button type="button" id="retryBtn" hidden>Coba Lagi</button>
-    </div>
-
-  <div class="grid" id="productGrid"></div>
-  </main>
-
-  <footer>
-    sumber data: dummyjson.com &middot; HTML + CSS + JavaScript native
-  </footer>
-
-<script src="js/index.js"></script>
 </body>
 </html>
